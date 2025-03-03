@@ -48,6 +48,11 @@ main{
 main> section{
     margin-top: 130px;
 }
+
+.section-title{
+    font-weight: 700;
+    font-size: 2.81rem;
+}
 /* header style */
 
 /* navbar related style */
@@ -110,13 +115,61 @@ main> section{
     max-width: 537px;
 }
 
-.feature-title{
-    font-weight: 700;
-    font-size: 2.81rem;
-}
 
 #Quick-list{
     font-weight: 500;
+}
+
+/* some fact card related style */
+.fact-discription{
+    max-width: 542px;
+    margin-bottom: 60px;
+}
+
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fact-card{
+    border: 1px solid rgba(255, 144, 14, 1);
+    border-radius: 8px;
+    width: 242px;
+    height: 242px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fact-number{
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: rgba(66, 66, 66, 1);
+}
+
+.fact-name{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0;
+    color: rgba(114, 114, 114, 1);
+}
+
+/* sponspor related style */
+.sponspor-info{
+    max-width: 542px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponspor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponspor-companies img{
+    filter: grayscale(100%);
 }
 
 /* responsive media quary */
@@ -125,11 +178,39 @@ main> section{
         flex-direction: column;
     }
 
-    .team-img-container{
+    .team-img-container, .facts-container, .sponspor-companies{
         grid-template-columns: repeat(1, 1fr);
     }
 
     .our-features{
         margin-left: 20px;
+    }
+
+    .facts-container{
+        justify-items: center;
+        gap: 24px;
+    }
+
+    .sponspor-companies{
+        gap: 40px;
+        justify-items: center;
+    }
+}
+
+/* responsive for medium device */
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .teams{
+        flex-direction: column;
+    }
+
+    .our-features{
+        margin: 30px auto;
+    }
+
+    .facts-container, .sponspor-companies{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 50px;
     }
 }
